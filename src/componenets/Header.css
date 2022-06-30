@@ -1,0 +1,12 @@
+.app__header {
+    width: 100vw;
+    height: 7vh;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__header-logo {
+    font-size: 1.6rem;
+}
