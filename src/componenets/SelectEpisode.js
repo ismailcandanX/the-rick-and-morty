@@ -6,6 +6,7 @@ import "./SelectEpisode.css"
 function SelectEpisode(props) {
     return (
         <div className="app__selectEpisode">
+            <Link to="/" className="app__episodeDetails-back" style={{ marginBottom: "1rem" }}>Go Back 👈</Link>
             <h1 className="app__selectEpisode-title">Select Episode</h1>
             <ul>
                 {props.episodes?.map(episode => (

@@ -23,7 +23,10 @@
 }
 
 .app__home-description {
-    font-size: 1.2rem;
+    width: 100vw;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.4rem;
     color: #377D71;
     margin-bottom: 1rem;
 }
