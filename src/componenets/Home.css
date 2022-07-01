@@ -13,16 +13,19 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 1rem 0;
 }
 
 .app__home-welcome {
     font-size: 2rem;
     color: #377D71;
+    margin-bottom: 1rem;
 }
 
 .app__home-description {
     font-size: 1.2rem;
     color: #377D71;
+    margin-bottom: 1rem;
 }
 .app__home-link {
     font-size: 1.2rem;
@@ -30,7 +33,8 @@
     text-decoration: none;
     transition: color 0.3s;
     underline: none;
-    &:hover {
-        color: #90C8AC;
-    }
+    transition: all 0.1s ease-in-out;
+}
+.app__home-link:hover {
+    opacity: 0.8;
 }

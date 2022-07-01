@@ -9,9 +9,22 @@
 }
 ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
     padding-inline-start: 0px;
+}
+@media ( max-width: 1000px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    ul {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
 }
 
 ul > li {
@@ -48,4 +61,8 @@ ul > li {
     color: #377D71;
     text-align: center;
     margin-top: 1em;
+}
+
+ul > li:hover {
+    opacity: 0.8;
 }

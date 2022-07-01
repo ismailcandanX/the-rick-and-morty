@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
+import "./CharacterDetails.css"
 function CharacterDetails() {
     const { id } = useParams()
     const [character, setCharacter] = React.useState([])
@@ -15,13 +16,26 @@ function CharacterDetails() {
     useEffect(() => {
         getCharacter()
     }, [])
-
+    console.log(character)
     return (
-        <div>
-            <h1>{character.name}</h1>
-            <p>{character.status}</p>
-            <p>{character.species}</p>
-            <img src={character.image} />
+        <div className="app__characterDetails">
+            <div className="go-back">
+                <Link to="/search" className="app__episodeDetails-back"><h2>Go Back 👈</h2></Link>
+            </div>
+
+            <div className="app__characterDetails-wrapper">
+
+                <div className="character__image">
+                    <img src={character.image} />
+                </div>
+                <div className="character__description">
+                    <h1 className="character__name"> 👉 Name: {character.name}</h1>
+                    <h2 className="character__desc">👉Status: {character.status}</h2>
+                    <h2 className="character__desc">👉Type: {character.type}</h2>
+                    <h2 className="character__desc">👉Species: {character.species}</h2>
+                    <h2 className="character__desc">👉Gender: {character.gender}</h2>
+                </div>
+            </div>
         </div>
     )
 }
